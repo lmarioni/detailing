@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import React, { useState } from 'react';
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function Home({products}) {
   const productoEjemplo =  {
@@ -37,7 +36,7 @@ function Home({products}) {
             </h1>
             <p class="mb-8 leading-relaxed">Toxic Shine Products</p>
             <div class="flex justify-center">
-              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Whatsapp</button>
+              <a href="https://wa.link/jqoyo5" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Whatsapp</a>
             </div>
           </div>
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -97,11 +96,15 @@ function Home({products}) {
                 <div class="md:flex-grow">
                   <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{product.Producto}</h2>
                   <p class="leading-relaxed" style={{textTransform: 'capitalize'}}> {product.Descripcion} </p>
-                  <a class="text-indigo-500 inline-flex items-center mt-4">{product.Precio}
-                    {/* <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <p class=" leading-relaxed text-indigo-500 ">{product.Precio}
+                  </p>
+                  
+                  <a href="https://wa.link/jqoyo5" className=" inline-flex items-center mt-4 text-black">
+                    Comprar
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
                       <path d="M12 5l7 7-7 7"></path>
-                    </svg> */}
+                    </svg>
                   </a>
                 </div>
               </div>
